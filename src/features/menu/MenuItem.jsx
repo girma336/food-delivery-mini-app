@@ -8,7 +8,14 @@ import { addItem, getCurrentQuantityById } from '../cart/cartSlice';
 
 function MenuItem({ pizza }) {
   const dispatch = useDispatch();
-  const { id, name, price: unitPrice, ingredients, soldOut, imageUrl } = pizza;
+  const {
+    id,
+    name,
+    price: unitPrice,
+    ingredients,
+    soldOut,
+    image_url: imageUrl,
+  } = pizza;
 
   const currentQuantity = useSelector(getCurrentQuantityById(id));
   const isInCart = currentQuantity > 0;
