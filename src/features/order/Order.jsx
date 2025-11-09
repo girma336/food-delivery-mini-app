@@ -61,6 +61,15 @@ function Order() {
 
   return (
     <div className="space-y-4 p-4">
+      <div className="px-2">
+        <Button
+          type="primary"
+          onClick={() => navigate('/menu')}
+          className="w-full"
+        >
+          Go back to Menu
+        </Button>
+      </div>
       <h1 className="mb-6 text-2xl font-bold">Your Orders</h1>
 
       {orders.map((order) => {

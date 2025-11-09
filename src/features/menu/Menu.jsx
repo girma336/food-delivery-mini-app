@@ -26,6 +26,16 @@ function Menu() {
   }
   return (
     <ul className="divide-y divide-stone-200 px-2">
+      <div className="px-2">
+        <Button
+          type="primary"
+          onClick={() => navigate('/orders')}
+          // disabled={!hasOrders}
+          className="w-full"
+        >
+          View Your Orders
+        </Button>
+      </div>
       {menuItems?.map((pizza) => (
         <MenuItem pizza={pizza} key={pizza.id} />
       ))}

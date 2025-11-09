@@ -68,8 +68,8 @@ function CreateOrder() {
     };
 
     createOrder(orderData, {
-      onSuccess: ({ orderId }) => {
-        navigate(`/order/${orderId}`);
+      onSuccess: () => {
+        navigate(`/orders`);
       },
     });
   };

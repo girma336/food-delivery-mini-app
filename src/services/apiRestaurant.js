@@ -41,9 +41,9 @@ export async function createOrder(orderData, initData, restaurantId) {
       customer_id: customer.id,
       restaurant_id: restaurantId,
       address: orderData.address || null,
-      location: orderData.location
-        ? `POINT(${orderData.location.lng} ${orderData.location.lat})`
-        : null,
+      // location: orderData.location
+      //   ? `POINT(${orderData.location.lng} ${orderData.location.lat})`
+      //   : null,
       total_price: orderData.totalPrice,
       order_items: orderData.cart.map((item) => ({
         menu_item_id: item.id,
