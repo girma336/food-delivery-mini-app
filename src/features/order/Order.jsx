@@ -6,12 +6,13 @@ import OrderItem from './OrderItem';
 import Loader from '../../ui/Loader';
 import { useMenuItems } from '../menu/useManuItem';
 import Button from '../../ui/Button';
+import { useNavigate } from 'react-router-dom';
 
 function Order() {
   const customer = JSON.parse(localStorage.getItem('customer'));
   const restaurantId = customer?.restaurantId;
   const [openId, setOpenId] = useState(null);
-
+  const navigate = useNavigate();
   // 1. Get orders
   const {
     data: orders = [],
