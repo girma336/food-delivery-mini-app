@@ -5,6 +5,7 @@ import { formatCurrency, formatDate } from '../../utils/helpers';
 import OrderItem from './OrderItem';
 import Loader from '../../ui/Loader';
 import { useMenuItems } from '../menu/useManuItem';
+import Button from '../../ui/Button';
 
 function Order() {
   const customer = JSON.parse(localStorage.getItem('customer'));
