@@ -29,7 +29,7 @@ function Menu() {
   }
   return (
     <ul className="divide-y divide-stone-200 px-2">
-      <div className="px-2">
+      <div className="px-2 py-4">
         <Button
           type="primary"
           onClick={() => navigate('/orders')}
