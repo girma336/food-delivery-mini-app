@@ -4,8 +4,10 @@ import MenuItem from './MenuItem';
 import Loader from '../../ui/Loader';
 import CartOverview from '../cart/CartOverview';
 import Button from '../../ui/Button';
+import { useNavigate } from 'react-router-dom';
 function Menu() {
   // const menu = useLoaderData();
+  const navigate = useNavigate();
   const { customerId } = useSelector((state) => state.user);
   const restaurantId = localStorage.getItem('customer')
     ? JSON.parse(localStorage.getItem('customer')).restaurantId
